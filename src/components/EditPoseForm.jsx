@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 
 
-let baseURLPose = 'http://localhost:8000/api/v1/poses/';
+let baseURLPose = 'http://localhost:8000/api/v1/poses/' || 'https://peaceful-mind.herokuapp.com/api/v1/poses/' ;
 
 export default class componentName extends Component {
     state={
