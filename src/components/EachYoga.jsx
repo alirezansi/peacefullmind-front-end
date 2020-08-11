@@ -7,8 +7,8 @@ import EditPoseForm from './EditPoseForm.jsx'
 
 
 
-let baseURL = 'http://localhost:8000/api/v1/yogas/' || 'https://peaceful-mind.herokuapp.com/api/v1/yogas/'  ;
-let baseURLPose = 'http://localhost:8000/api/v1/poses/' || 'https://peaceful-mind.herokuapp.com/api/v1/poses/' ;
+let baseURL = 'http://localhost:8000/api/v1/yogas/' || 'https://peacefulmind.herokuapp.com/api/v1/yogas/'  ;
+let baseURLPose = 'http://localhost:8000/api/v1/poses/' || 'https://peacefulmind.herokuapp.com/api/v1/poses/' ;
 
 //learned this.props.match.params from https://stackoverflow.com/questions/54114416/how-to-access-this-props-match-params-along-with-other-props
 export default class EachYoga extends Component {

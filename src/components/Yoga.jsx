@@ -7,7 +7,7 @@ import Footer from './Footer'
 
 
 
-let baseURL = 'http://localhost:8000/api/v1/yogas/' || 'https://peaceful-mind.herokuapp.com/api/v1/yogas/'  ;
+let baseURL = 'http://localhost:8000/api/v1/yogas/' || 'https://peacefulmind.herokuapp.com/api/v1/yogas/'  ;
 
 
 
