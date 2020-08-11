@@ -7,10 +7,18 @@ import EditPoseForm from './EditPoseForm.jsx'
 
 
 
-let baseURL = 'http://localhost:8000/api/v1/yogas/' || process.env.REACT_APP_API_URL + 'api/v1/yogas/'  ;
-let baseURLPose = 'http://localhost:8000/api/v1/poses/' || process.env.REACT_APP_API_URL + 'api/v1/poses/' ;
+let baseURL = process.env.REACT_APP_API_URL + 'api/v1/yogas/' ;
+console.log(process.env.REACT_APP_API_URL)
+let baseURLPose = process.env.REACT_APP_API_URL + 'api/v1/poses/' ;
 
-//learned this.props.match.params from https://stackoverflow.com/questions/54114416/how-to-access-this-props-match-params-along-with-other-props
+
+
+
+
+//learned this.props.match.params from
+// https://stackoverflow.com/questions/54114416/how-to-access-this-props-match-params-along-with-other-props
+
+
 export default class EachYoga extends Component {
     state = {
         yoga: {},
