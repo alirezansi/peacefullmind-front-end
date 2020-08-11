@@ -7,8 +7,8 @@ import EditPoseForm from './EditPoseForm.jsx'
 
 
 
-let baseURL = 'http://localhost:8000/api/v1/yogas/' || 'https://peacefulmind.herokuapp.com/api/v1/yogas/'  ;
-let baseURLPose = 'http://localhost:8000/api/v1/poses/' || 'https://peacefulmind.herokuapp.com/api/v1/poses/' ;
+let baseURL = 'http://localhost:8000/api/v1/yogas/' || process.env.REACT_APP_API_URL + 'api/v1/yogas/'  ;
+let baseURLPose = 'http://localhost:8000/api/v1/poses/' || process.env.REACT_APP_API_URL + 'api/v1/poses/' ;
 
 //learned this.props.match.params from https://stackoverflow.com/questions/54114416/how-to-access-this-props-match-params-along-with-other-props
 export default class EachYoga extends Component {
@@ -118,12 +118,12 @@ export default class EachYoga extends Component {
     removePose = async (poseId) => {
         try {
             const response = await axios.delete(baseURLPose + poseId).then(() => {
-                this.findPoses(this.props.match.params.id)
             })
         }
         catch (err) {
             console.log(`delete does not work`, err)
-        }
+        } 
+        this.findPoses(this.props.match.params.id)
     }
 
 
