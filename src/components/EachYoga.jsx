@@ -6,6 +6,7 @@ import Footer from './Footer.jsx'
 import EditPoseForm from './EditPoseForm.jsx'
 
 
+
 let baseURL = 'http://localhost:8000/api/v1/yogas/';
 let baseURLPose = 'http://localhost:8000/api/v1/poses/';
 
