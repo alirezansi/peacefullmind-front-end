@@ -8,7 +8,7 @@ import EditPoseForm from './EditPoseForm.jsx'
 
 
 let baseURL = process.env.REACT_APP_API_URL + 'api/v1/yogas/' ;
-console.log(process.env.REACT_APP_API_URL)
+
 let baseURLPose = process.env.REACT_APP_API_URL + 'api/v1/poses/' ;
 
 
@@ -97,7 +97,8 @@ export default class EachYoga extends Component {
         try {
             const response = await axios.post(baseURLPose, this.state.newPose)
             const copyPoses = [...this.state.poses]
-            copyPoses.push(response.data)
+            copyPoses.push(response.data.data)
+            console.log(response.data)
             this.setState({
                 poses: copyPoses,
                 newPose: {
@@ -125,13 +126,13 @@ export default class EachYoga extends Component {
 
     removePose = async (poseId) => {
         try {
-            const response = await axios.delete(baseURLPose + poseId).then(() => {
-            })
+            const response = await axios.delete(baseURLPose + poseId)
+            this.findPoses(this.props.match.params.id)
         }
         catch (err) {
             console.log(`delete does not work`, err)
         } 
-        this.findPoses(this.props.match.params.id)
+        
     }
 
 

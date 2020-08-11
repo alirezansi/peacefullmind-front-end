@@ -9,7 +9,7 @@ import Footer from './Footer'
 
 
 let baseURL = process.env.REACT_APP_API_URL + 'api/v1/yogas/' ;
-console.log(process.env.REACT_APP_API_URL)
+
 
 
 
