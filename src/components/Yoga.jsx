@@ -42,6 +42,7 @@ export default class Yoga extends Component {
         fetch(baseURL ).then(res => {
             return res.json();
         }).then(data => {
+            
             this.setState({
             yogas : data.data
             });
@@ -55,7 +56,6 @@ export default class Yoga extends Component {
             const response = await axios.post(baseURL , this.state.newYoga)
             const copyYogas = [...this.state.yogas]
             copyYogas.push(response.data.data)
-            console.log(response.data)
             this.setState({
                 workouts: copyYogas,
                 newYoga: {
@@ -90,10 +90,7 @@ render(){
             <div>
                 <Navbar />
             </div>
-            <div className='yogaHeader'>
-            </div>
-            if(this.state.yogas !== []){
-                <div className='yogas'>
+            <div className='yogas'>
                 {this.state.yogas.map(yoga=>{
                     return(
                         <div className='yoga' key={yoga.id} >
@@ -103,7 +100,6 @@ render(){
                     )
                 })}
             </div>
-            }
             <div className='plusShow'>
                 <button onClick={(event)=> this.showForm(event)}>+</button>
             </div>
