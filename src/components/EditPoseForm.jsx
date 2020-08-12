@@ -62,7 +62,7 @@ export default class componentName extends Component {
     return (
         <>
         <div className='close'>
-            <img src='https://cdn4.iconfinder.com/data/icons/media-controls-4/100/close-512.png' className='trash' onClick={(event)=> this.props.closeForm(event)} ></img>
+            <img alt='' src='https://cdn4.iconfinder.com/data/icons/media-controls-4/100/close-512.png' className='trash' onClick={(event)=> this.props.closeForm(event)} ></img>
         </div> 
         <div className='EditPoseForm'>
             <form onSubmit={ (event , id) => this.updatePose(event , this.state.id ) }>

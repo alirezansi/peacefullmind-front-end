@@ -125,7 +125,7 @@ export default class EachYoga extends Component {
 
     removePose = async (poseId) => {
         try {
-            const response = await axios.delete(baseURLPose + poseId)
+            await axios.delete(baseURLPose + poseId)
             this.findPoses(this.props.match.params.id)
         }
         catch (err) {
@@ -159,7 +159,7 @@ export default class EachYoga extends Component {
                 </div>
                 <div>
                     <h1 className='headerEachYoga'>{this.state.yoga.name}</h1>
-                    {this.state.idOfPoseToEdit != -1 ? 
+                    {this.state.idOfPoseToEdit !== -1 ? 
                     <EditPoseForm findPoses={this.findPoses} 
                         CurrentPoseBeingEdited={this.state.CurrentPoseBeingEdited}
                         yogaId={this.props.match.params.id}
@@ -175,7 +175,7 @@ export default class EachYoga extends Component {
                             return(
                                 <div className='eachPose' key={pose.id}>
                                     <div className='videos'>
-                                    <iframe width="300" height="200" src={pose.video} ></iframe>
+                                    <iframe title={pose.name} width="300" height="200" src={pose.video} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
                                     <div>
                                         <img onClick={()=> this.removePose(pose.id) } className='trash' alt='' src='https://static.thenounproject.com/png/147529-200.png'></img>
                                         <img onClick={() => this.editCurrentPose(pose)} className='trash' alt='' src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Edit_icon_%28the_Noun_Project_30184%29.svg/1024px-Edit_icon_%28the_Noun_Project_30184%29.svg.png'></img>
