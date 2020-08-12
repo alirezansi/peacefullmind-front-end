@@ -105,6 +105,7 @@ export default class EachYoga extends Component {
                     description: '',
                     benefits: '',
                     video:'',
+                    yoga:''
                 }
             })
         }
@@ -125,8 +126,8 @@ export default class EachYoga extends Component {
 
     removePose = async (poseId) => {
         try {
-            await axios.delete(baseURLPose + poseId)
-            this.findPoses(this.props.match.params.id)
+            await axios.delete(baseURLPose + poseId);
+            this.findPoses(this.props.match.params.id);
         }
         catch (err) {
             console.log(`delete does not work`, err)
