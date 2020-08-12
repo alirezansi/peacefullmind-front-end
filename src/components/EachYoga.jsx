@@ -105,7 +105,7 @@ export default class EachYoga extends Component {
                     description: '',
                     benefits: '',
                     video:'',
-                    yoga:''
+                    yoga:this.props.match.params.id
                 }
             })
         }
@@ -114,6 +114,14 @@ export default class EachYoga extends Component {
         }
     this.findPoses(this.props.match.params.id)
     }
+    
+
+
+
+
+
+
+
 
     handleChangePose = (event) => {
         const copyNewPose = { ...this.state.newPose }
