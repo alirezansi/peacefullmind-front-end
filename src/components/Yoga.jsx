@@ -85,7 +85,6 @@ export default class Yoga extends Component {
 
 
 render(){
-    console.log(this.state.yogas)
     return(
         <div>
             <div>
@@ -94,7 +93,7 @@ render(){
             <div className='yogaHeader'>
             </div>
             <div className='yogas'>
-                
+{/*                 
                 {this.state.yogas.map(yoga=>{
                     return(
                         <div className='yoga' key={yoga.id} >
@@ -102,7 +101,7 @@ render(){
                             <img className='yogaImg' src={yoga.img} alt='' />
                         </div>
                     )
-                })}
+                })} */}
             </div>
             <div className='plusShow'>
                 <button onClick={(event)=> this.showForm(event)}>+</button>
