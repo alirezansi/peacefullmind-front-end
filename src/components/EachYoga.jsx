@@ -98,7 +98,6 @@ export default class EachYoga extends Component {
             const response = await axios.post(baseURLPose, this.state.newPose)
             const copyPoses = [...this.state.poses]
             copyPoses.push(response.data.data)
-            console.log(response.data)
             this.setState({
                 poses: copyPoses,
                 newPose: {

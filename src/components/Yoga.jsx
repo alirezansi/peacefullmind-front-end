@@ -54,7 +54,8 @@ export default class Yoga extends Component {
         try {
             const response = await axios.post(baseURL , this.state.newYoga)
             const copyYogas = [...this.state.yogas]
-            copyYogas.push(response.data)
+            copyYogas.push(response.data.data)
+            console.log(response.data)
             this.setState({
                 workouts: copyYogas,
                 newYoga: {
@@ -84,6 +85,7 @@ export default class Yoga extends Component {
 
 
 render(){
+    console.log(this.state.yogas)
     return(
         <div>
             <div>
@@ -92,6 +94,7 @@ render(){
             <div className='yogaHeader'>
             </div>
             <div className='yogas'>
+                
                 {this.state.yogas.map(yoga=>{
                     return(
                         <div className='yoga' key={yoga.id} >

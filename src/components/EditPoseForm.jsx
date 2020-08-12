@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
 
-
-
-
-
-
 let baseURLPose = process.env.REACT_APP_API_URL + 'api/v1/poses/' ;
 
 export default class componentName extends Component {
