@@ -5,15 +5,15 @@ img{
     height: 100%;
 }
 .loadLogo{
-    width: 500px;
-    margin-top: 200px;
+    width: 800px;
+    margin-top: 50px;
     border-radius: 50%;
 }
 .loadPage{
     display: flex;
     align-items: center;
     justify-content: center;
-
+    
 }
 
 .logoImg{
@@ -54,7 +54,7 @@ body{
 
 .nav-link{
     text-decoration: none;
-    margin-right: 40px;
+    margin-right: 20px;
     color: white;
     transition: 0.5s;
     font-family: 'Kaushan Script', cursive;
@@ -193,11 +193,28 @@ button{
 
 
 
+.aboutPic{
+    width: 400px;
+}
+.aboutDiv{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
-
-
-
-
+.aboutParagraph{
+    width: 100%;
+    margin: 20px;
+    padding: 10px;
+    
+}
+.nameH{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 .footer{
@@ -207,4 +224,54 @@ button{
     padding-bottom: 10px;
     border-top: 1px solid white;
     
+}
+
+.loadName{
+    margin-top: 180px;
+    left: 43%;
+    position:absolute;
+    align-items: center;
+    flex-direction: column;
+    background-color:#4D4D4D;
+    padding: 20px;
+    font-family: 'Kaushan Script', cursive;
+    border-radius: 50px;
+    color: white;
+}
+
+
+
+.homepage{
+    width: 100%;
+    height: 100%;
+   display: flex;
+   background-color: black;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-image: url(https://www.nicepng.com/png/full/371-3715095_reputation-full-circle-transparent-background-white-white-cinematic.png);
+   background-repeat: no-repeat;
+   background-size:800px;
+   background-position-x: center;
+   background-position-y: center;
+   padding-bottom: 100px;
+}
+
+
+@media only screen and (max-width: 500px){
+    .peaceful{
+        font-size: 20px;
+    }
+
+    .loadLogo{
+        width: 700px;
+    }
+    .loadName{
+        left: 20%;
+    }
+    .nav-link{
+        font-size: 15px;
+    }
+
+
 }

@@ -4,7 +4,7 @@ import Navbar from './Navbar'
 import NewPoseForm from './NewPoseForm'
 import Footer from './Footer.jsx'
 import EditPoseForm from './EditPoseForm.jsx'
-
+import { Redirect } from 'react-router-dom'
 
 
 let baseURL = process.env.REACT_APP_API_URL + 'api/v1/yogas/' ;
@@ -85,7 +85,15 @@ export default class EachYoga extends Component {
         });
     }
 
+    deleteYoga = async () => {
+        try {
+        await axios.delete(baseURL + this.props.match.params.id)
 
+        }
+        catch (err) {
+            console.log(`delte does not work !`, err)
+        }
+    }
 
 
 
@@ -167,7 +175,10 @@ export default class EachYoga extends Component {
                     <Navbar />
                 </div>
                 <div>
-                    <h1 className='headerEachYoga'>{this.state.yoga.name}</h1>
+                    <div className='nameH'>
+                        <h1 className='headerEachYoga'>{this.state.yoga.name}</h1>
+                        <img onClick={()=> this.deleteYoga() } className='trash' alt='' src='https://static.thenounproject.com/png/147529-200.png'></img>
+                    </div>
                     {this.state.idOfPoseToEdit !== -1 ? 
                     <EditPoseForm findPoses={this.findPoses} 
                         CurrentPoseBeingEdited={this.state.CurrentPoseBeingEdited}
