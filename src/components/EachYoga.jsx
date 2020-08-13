@@ -85,19 +85,6 @@ export default class EachYoga extends Component {
         });
     }
 
-    deleteYoga = async () => {
-        try {
-        await axios.delete(baseURL + this.props.match.params.id)
-
-        }
-        catch (err) {
-            console.log(`delte does not work !`, err)
-        }
-    }
-
-
-
-
 
     addPose = async (event) => {
         event.preventDefault()
@@ -177,7 +164,6 @@ export default class EachYoga extends Component {
                 <div>
                     <div className='nameH'>
                         <h1 className='headerEachYoga'>{this.state.yoga.name}</h1>
-                        <img onClick={()=> this.deleteYoga() } className='trash' alt='' src='https://static.thenounproject.com/png/147529-200.png'></img>
                     </div>
                     {this.state.idOfPoseToEdit !== -1 ? 
                     <EditPoseForm findPoses={this.findPoses} 
