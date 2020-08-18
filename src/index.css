@@ -258,6 +258,11 @@ button{
 }
 
 
+.yogaDelete{
+    margin-left: 10px;
+}
+
+
 @media only screen and (max-width: 500px){
     .peaceful{
         font-size: 20px;

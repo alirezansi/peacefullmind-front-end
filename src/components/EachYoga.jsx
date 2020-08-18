@@ -33,8 +33,8 @@ export default class EachYoga extends Component {
         showForm:false,
         editForm:false,
         idOfPoseToEdit: -1,
-        CurrentPoseBeingEdited: null
-
+        CurrentPoseBeingEdited: null,
+        redirectToYogas: false,
     }
 
 
@@ -112,7 +112,17 @@ export default class EachYoga extends Component {
     
 
 
-
+    deleteYoga = async () => {
+        try {
+            await axios.delete( baseURL  + this.props.match.params.id)
+            this.setState({
+                redirectToYogas: true
+            })
+        }
+        catch (err) {
+            console.log('did not delete the yoga', err)
+        }
+    }
 
 
 
@@ -154,6 +164,9 @@ export default class EachYoga extends Component {
 
 
     render() {
+        if (this.state.redirectToYogas === true) {
+            return <Redirect to="/yogas" />
+        }
         return (
             <div>
                 
@@ -164,6 +177,7 @@ export default class EachYoga extends Component {
                 <div>
                     <div className='nameH'>
                         <h1 className='headerEachYoga'>{this.state.yoga.name}</h1>
+                        <img onClick={()=> this.deleteYoga() } className='trash yogaDelete' alt='' src='https://static.thenounproject.com/png/147529-200.png'></img>
                     </div>
                     {this.state.idOfPoseToEdit !== -1 ? 
                     <EditPoseForm findPoses={this.findPoses} 
