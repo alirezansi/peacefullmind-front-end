@@ -165,17 +165,14 @@ button{
 .eachPose{
     border-top:3px solid #424242;
     display: flex;
-    flex-wrap: wrap;
     margin: 10px;
     align-items: center;
+    justify-content: center;
 }
 
 
 
-.descriptions{
-    margin-left: 60px;
-    width: 600px;
-}
+
 
 .videos{
     margin: 10px;
@@ -208,7 +205,7 @@ button{
     width: 100%;
     margin: 20px;
     padding: 10px;
-    
+    margin-bottom: 220px;
 }
 .nameH{
     display: flex;
@@ -277,6 +274,8 @@ button{
     .nav-link{
         font-size: 15px;
     }
-
+    .eachPose{
+        flex-wrap: wrap;
+    }
 
 }
