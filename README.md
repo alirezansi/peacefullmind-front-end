@@ -4,30 +4,26 @@
 
 
 ## Overview
-Roadtripedia is an app which allows roadtrip lover to browse a list of cool places to visit categorized by state. in the app each state have multiple places and user have the ability to add new place,edit or delete them. In the main show page of the each place user is able to see a history of the place and a youtube video about that place that can help them to choose their next stop.
+Peaceful Mind is a Yoga application provides all the poses categorized by difficulity levels. user are able to see the name of the pose, benefits, full step by step instruction and a video of that pose. also they can add and share a new section with different poses.
 
 
 ## Links 
-[Live site on Heroku](https://roadtripedia.herokuapp.com/)
+[Live site on Heroku](https://peaceful-mind.herokuapp.com/)
 
 
 ## Technologies Utilized
 full-stack CRUD application built by:
-* Node.js
-* Mongoose
-* Express and EJS
+* Python
+* Flask
+* React
+* SQLite
 * RESTful API
 
 
-## Features
-* see all the cool places to visit categorized by states
-* see an image, a video and history of the place 
-* add, delete or edit states or places
-* share the link of the page with friend by sending an email
+## WireFrame
+![Wireframe Pro](/img/wireframe.png)
 
 
 ## Future Development
-* Allow users to upload place's images rather than URLs and share it with all users
-* user will able to make wishlist page and save it for future reference 
-* user will be able to share the link of that place with their friend using the email input
-* adding google map to show the location of the place on the map
+* Add admin page that only admin to add,edit or delete excercise or sections
+* add a new section that user can access and enroll different classes
